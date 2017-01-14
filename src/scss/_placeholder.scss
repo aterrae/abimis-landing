@@ -1,0 +1,49 @@
+.background {
+    background: linear-gradient(8deg, darken($primary-color, 5), 50%, $primary-color 40%);
+}
+
+.placeholder {
+    margin: 0 auto;
+    font-family: 'Roboto';
+
+    h1 {
+        font-weight: 900;
+        text-transform: uppercase;
+        margin: 0;
+    }
+    h4 {
+        font-family: 'Dancing Script';
+        color: $secondary-color;
+    }
+    h5 {font-weight: 300}
+
+    &__container {
+        border: solid 8px;
+        padding: 64px 16px;
+    }
+
+    &__stroke {
+        margin: 22px auto;
+        border: 4px solid;
+        width: 50%;
+    }
+
+    &__button {
+        font-weight: 500;
+        letter-spacing: 2px;
+
+        height: 48px;
+        border-radius: 24px;
+        line-height: 48px;
+        border: none;
+        text-transform: uppercase;
+        background: linear-gradient(to right top, lighten($primary-color, 10) 0%, lighten($primary-color, 5) 17%, $primary-color 41%, darken($primary-color, 5) 84%, darken($primary-color, 10) 100%);
+        transition: ease-in-out 600ms;
+
+        &:hover {
+            background: linear-gradient(to right top, $primary-color 0%, darken($primary-color, 5) 17%, darken($primary-color, 10) 41%, darken($primary-color, 15) 84%, darken($primary-color, 20) 100%);
+            box-shadow: 0 4px 23px 4px rgba(0, 238, 135, 0.3);
+            transition: ease-in-out 600ms;
+        }
+    }
+}

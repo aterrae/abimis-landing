@@ -1,0 +1,72 @@
+//Grid
+
+$advanced-breakpoints:          false;
+$grid-width-limit-active:       false;
+$grid-width:                    1280px;
+$grid-base-gutter:              24px;
+
+//Grid -- Widths
+
+$phone-S:                       360px;
+$phone-M:                       400px;
+$phone-L:                       480px;
+$tab-S:                         600px;
+$tab-M:                         720px;
+$tab-L:                         840px;
+$tab-XL:                        960px;
+$desk-S:                        1024px;
+$desk-M:                        1280px;
+$desk-L:                        1440px;
+$desk-XL:                       1600px;
+
+$phone:                         $phone-S;
+$phablet:                       $phone-M;
+$tab:                           $tab-S;
+$lap:                           $desk-S;
+$desk:                          $desk-M;
+
+//Colors
+
+$black:                         #000000;
+$coal:                          #333333;
+$carbon:                        #666666;
+$smoke:                         #999999;
+$fog:                           #d8d8d8;
+$white:                         #ffffff;
+
+$primary-color:                 #00C26E;
+$secondary-color:               #169CEE;
+$warning-color:                 #F5A623;
+$danger-color:                  #e74c3c;
+$success-color:                 #B8E986;
+$info-color:                    $white;
+
+//Typography
+
+$heading-huge:                  4.0rem;
+$heading-large:                 3.6rem;
+$heading-medium:                3.0rem;
+$heading-small:                 2.4rem;
+$heading-smaller:               1.8rem;
+$heading-tiny:                  1.5rem;
+
+//Sizes
+
+$button-height:                 36px;
+$button-padding:                0 24px;
+$button-radius:                 6px;
+$field-height:                  40px;
+$field-padding:                 0 20px;
+$field-radius:                  6px;
+$field-background:              rgba(255,255,255,0.2);
+
+$topnav-height:                 64px;
+$topnav-logo-padding:           8px;
+$topnav-logo-height:            $topnav-height - ($topnav-logo-padding * 2);
+$topnav-color:                  $primary-color;
+$topnav-text-color:             $white;
+
+//Misc
+
+$code-theme:                    'dark';
+$progress-color:                $secondary-color;

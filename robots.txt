@@ -1,0 +1,13 @@
+# www.robotstxt.org/
+# www.google.com/support/webmasters/bin/answer.py?hl=en&answer=156449
+
+User-agent: *
+
+# To exclude all robots from the entire server
+# Disallow: /
+#
+# To allow all robots complete access
+# Disallow:
+#
+# To exclude all robots from part of the server
+# Disallow: /docs/

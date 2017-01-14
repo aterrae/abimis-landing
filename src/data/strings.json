@@ -1,0 +1,17 @@
+{
+    "projectName":"Abimis by Aterrae",
+    "userStrings": [
+        {
+          "className": "You can use it for your classes too!",
+          "idName": "And for your ids too!",
+          "username": "Camilla",
+          "stringId": "You can use them for anything! Have fun cowboy ;)"
+        },
+        {
+          "className": "You can use it for your classes too!",
+          "idName": "And for your ids too!",
+          "username": "Edoardo",
+          "stringId": "You can use them for anything! Have fun cowboy ;)"
+        }
+    ]
+}

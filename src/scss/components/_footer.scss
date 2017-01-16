@@ -18,16 +18,13 @@
     font-size: 1.4rem;
 
     &__logo {
-        // position: absolute;
-        // top: 0;
-        // left: 0;
         line-height: 64px;
         vertical-align: middle;
         margin-right: 16px;
+        height: 48px;
     }
 
     &__left {
-        // padding-left: 80px;
         text-align: center;
         height: 64px;
         @include media-query(lap-up) {

@@ -2,7 +2,7 @@
     <div class="grid text-align--center">
         {{> landing_cover_cell content=strings.tiles.[0] }}
         {{#if strings.settings.doubleCover}}
-            {{> landing_cover_cell content=strings.tiles.[1] }}
+        {{> landing_cover_cell content=strings.tiles.[1] }}
         {{/if}}
     </div>
     <div class="contact">
@@ -10,18 +10,22 @@
             <div class="grid__cell global-1of1 text-align--center padding-sides">
                 <h4>{{{strings.contactTitle}}}</h4>
             </div>
-            <form id="mc-form" action="index.html" method="GET">
+
+            <form action="{{{strings.mailchimpListUrl}}}" method="POST" name="mc-embedded-subscribe-form" id="mc-form" target="_blank" novalidate>
                 <div class="grid__cell phone-up-1of1 lap-up-3of10">
-                    <input type="text" name="name" value="" placeholder="Name" class="global-10of12 push--global-1of12">
+                    <input type="email" name="EMAIL" value="" placeholder="E-mail" class="global-10of12 push--global-1of12">
                 </div>
                 <div class="grid__cell phone-up-1of1 lap-up-3of10">
-                    <input type="text" name="surname" value="" placeholder="Surname" class="global-10of12 push--global-1of12">
+                    <input type="text" name="FNAME" value="" placeholder="Nome" class="global-10of12 push--global-1of12">
                 </div>
                 <div class="grid__cell phone-up-1of1 lap-up-3of10">
-                    <input type="email" name="mail" value="" placeholder="Email" class="global-10of12 push--global-1of12">
+                    <input type="text" name="LNAME" value="" placeholder="Cognome" class="global-10of12 push--global-1of12">
+                </div>
+                <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                    <input type="text" name="b_75afb8568f065242c10757684_160753883e" tabindex="-1" value="">
                 </div>
                 <div class="grid__cell phone-up-1of3 push--phone-1of3 push--phablet-1of3 push--tab-1of3 lap-up-1of10">
-                    <input type="submit" name="submit" value="SEND" class="button global-1of1">
+                    <input type="submit" name="subscribe" value="SEND" class="button global-1of1">
                 </div>
             </form>
         </div>

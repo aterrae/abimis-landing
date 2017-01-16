@@ -1,5 +1,5 @@
 # Abimis Landing
-Abimis landing is based on the [Abimis framework](https://https://github.com/aterrae/abimis) by [Aterrae](https://aterrae.com)
+Abimis landing is based on the [Abimis framework](https://https://github.com/aterrae/abimis) by [Aterrae](http://aterrae.com)
 
 ### Requirements
 To get started with Abimis you have to get some basic tools ready, these are:
@@ -29,6 +29,7 @@ npm run deploy
 Abimis landing is highly customizable in a quick and effective way.
 Most of the customization is centered around the strings file located in `src/data/strings.json`, this file manages most of the strings and contents used in the page.
 You can also change many aspects of the style using the SASS settings file located in `src/scss/_settings.scss`.
+There is native support for Mailchimp newsletter subscription. You can link your newsletter simply changing the Mailchimp string in the strings file.
 
 ---
 Made with plenty of ❤️ by two guys from the **Aterrae** team in Rubano (Padova), Italy

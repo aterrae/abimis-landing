@@ -1,17 +1,54 @@
 {
-    "projectName":"Abimis by Aterrae",
-    "userStrings": [
+    "projectName":"Aterrae - WIP landing",
+    "settings": {
+        "doubleCover": true
+    },
+    "logo": "https://placehold.it/128x128?text=LOGO",
+    "logo-footer": "https://placehold.it/64x64?text=LOGO+FOOTER",
+    "tiles": [
         {
-          "className": "You can use it for your classes too!",
-          "idName": "And for your ids too!",
-          "username": "Camilla",
-          "stringId": "You can use them for anything! Have fun cowboy ;)"
+            "headline": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo",
+            "caption": "Lorem ipsum.",
+            "callToAction": "CONTACT US",
+            "background": "http://www.thetailgatetimes.com/wp-content/uploads/2016/04/Alexis-Ren-7-1.jpg",
+            "style": "primary"
         },
         {
-          "className": "You can use it for your classes too!",
-          "idName": "And for your ids too!",
-          "username": "Edoardo",
-          "stringId": "You can use them for anything! Have fun cowboy ;)"
+            "headline": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo",
+            "caption": "Lorem ipsum.",
+            "callToAction": "CONTACT US",
+            "background": "http://wikitesti.com/wp-content/uploads/2016/04/Alvaro-Soler-04.jpg",
+            "style": "secondary"
         }
-    ]
+    ],
+    "contactTitle": "Lorem ipsum dolor.<br>Lorem ipsum dolor sit amet, consectetuer.",
+    "copyright": "© Aterrae. 2017",
+    "social": {
+        "title": "Seguici su",
+        "items": [
+            {
+                "name": "facebook",
+                "link": "https://www.facebook.com/aterrae",
+                "isSquare": true
+            },
+            {
+                "name": "instagram",
+                "link": "https://www.instagram.com/aterrae",
+                "isSquare": false
+            },
+            {
+                "name": "linkedin",
+                "link": "https://www.linkedin.com/company/aterrae",
+                "isSquare": true
+            }
+        ]
+    },
+    "contactModal": {
+        "title": "Lorem ipsum dolor!",
+        "message": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et <strong>(39) 0285 7389 927</strong>",
+        "phone": "0285 7389 927",
+        "mail": "info@placeholder.com",
+        "info-1": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et",
+        "info-2": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et"
+    }
 }

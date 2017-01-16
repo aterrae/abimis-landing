@@ -1,0 +1,27 @@
+<div class="overlay full-height-slide">
+    <div class="overlay__close">
+        <i class="fa fa-times fa-2x"></i>
+    </div>
+    <div class="grid grid--constrained overlay__content">
+        <div class="grid__cell global-1of1 margin-bottom--huge">
+            <h4 class="padding-sides">
+                <span class="color--primary">{{strings.contactModal.title}}</span><br>
+                {{{strings.contactModal.message}}}
+            </h4>
+        </div>
+        <div class="grid__cell phone-up-1of1 lap-up-1of3 margin-bottom--big">
+            {{#if strings.contactModal.phone}}<div class="padding-sides"><a href="tel:{{strings.contactModal.phone}}" class="button global-1of1">CHIAMACI</a></div>{{/if}}
+            {{#if strings.contactModal.mail}}<div class="padding-sides margin-top"><a href="mailto:{{mail}}" class="button global-1of1">SCRIVICI</a></div>{{/if}}
+        </div>
+        <div class="grid__cell phone-up-1of1 lap-up-1of4 push--lap-up-1of6">
+            <div class="padding-sides">
+                {{{strings.contactModal.info-1}}}
+            </div>
+        </div>
+        <div class="grid__cell phone-up-1of1 lap-up-1of4">
+            <div class="padding-sides">
+                {{{strings.contactModal.info-2}}}
+            </div>
+        </div>
+    </div>
+</div>

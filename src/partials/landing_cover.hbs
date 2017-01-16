@@ -1,0 +1,31 @@
+<section class="">
+    <div class="grid text-align--center">
+        {{> landing_cover_cell content=strings.tiles.[0] }}
+        {{#if strings.settings.doubleCover}}
+            {{> landing_cover_cell content=strings.tiles.[1] }}
+        {{/if}}
+    </div>
+</section>
+<section class="contact">
+    <div class="grid grid--constrained">
+        <div class="grid__cell global-1of1 text-align--center padding-sides">
+            <h4>{{{strings.contactTitle}}}</h4>
+        </div>
+        <form id="mc-form" action="index.html" method="GET">
+            <div class="grid__cell phone-up-1of1 lap-up-3of10">
+                <input type="text" name="name" value="" placeholder="Name" class="global-10of12 push--global-1of12">
+            </div>
+            <div class="grid__cell phone-up-1of1 lap-up-3of10">
+                <input type="text" name="surname" value="" placeholder="Surname" class="global-10of12 push--global-1of12">
+            </div>
+            <div class="grid__cell phone-up-1of1 lap-up-3of10">
+                <input type="email" name="mail" value="" placeholder="Email" class="global-10of12 push--global-1of12">
+            </div>
+            <div class="grid__cell phone-up-1of3 push--phone-1of3 push--phablet-1of3 push--tab-1of3 lap-up-1of10">
+                <input type="submit" name="submit" value="SEND" class="button global-1of1">
+            </div>
+        </form>
+    </div>
+
+    {{>landing_footer}}
+</section>

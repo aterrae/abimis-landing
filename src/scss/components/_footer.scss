@@ -1,0 +1,68 @@
+.footer {
+    position: relative;
+    width: 100%;
+    z-index: 1000;
+    background: $white;
+
+    @include media-query(desk) {
+        position: absolute;
+        padding: 0 32px;
+        box-sizing: border-box;
+    };
+
+    overflow: hidden;
+    bottom: 0;
+    line-height: 100%;
+    border-top: 1px solid $fog;
+    color: #585551;
+    font-size: 1.4rem;
+
+    &__logo {
+        // position: absolute;
+        // top: 0;
+        // left: 0;
+        line-height: 64px;
+        vertical-align: middle;
+        margin-right: 16px;
+    }
+
+    &__left {
+        // padding-left: 80px;
+        text-align: center;
+        height: 64px;
+        @include media-query(lap-up) {
+            text-align: left;
+        };
+    }
+
+    &__right {
+        text-align: center;
+        height: 64px;
+        background: $fog;
+        @include media-query(lap-up) {
+            text-align: right;
+            background: $white;
+        };
+
+        p {
+            line-height: 64px;
+            vertical-align: middle;
+        }
+
+        i {
+            padding: 0 16px;
+            font-size: 24px;
+            line-height: 64px;
+            color: #585551;
+
+            &:hover {
+                color: $secondary-color;
+            }
+        }
+    }
+
+    p {
+        display: inline-block;
+        line-height: 64px;
+    }
+}

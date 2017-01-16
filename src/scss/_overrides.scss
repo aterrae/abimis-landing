@@ -1,0 +1,26 @@
+.topnav {
+    position: relative;
+
+    &__right {
+        div {
+            display: inline-block;
+            line-height: $topnav-height;
+        }
+    }
+
+    &__logo {
+        margin-left: $topnav-logo-padding;
+
+        &--right {
+            float: right;
+            margin-right: 16px;
+            height: $topnav-height / 2;
+            margin-top: $topnav-height / 8;
+        }
+    }
+
+    a {
+        color: #585551;
+        font-size: 2rem;
+    }
+}

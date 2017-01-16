@@ -1,17 +1,11 @@
-// import 'babel-polyfill';
-// import 'whatwg-fetch';
-// import React from 'react';
-// import ReactDOM from 'react-dom';
-// import { Provider } from 'react-redux';
-// import { Router, browserHistory } from 'react-router';
-// import configureStore from './store/configureStore';
-// import getRoutes from './routes';
-//
-// const store = configureStore(window.INITIAL_STATE);
-//
-// ReactDOM.render(
-//   <Provider store={store}>
-//     <Router history={browserHistory} routes={getRoutes(store)} />
-//   </Provider>,
-//   document.getElementById('root')
-// )
+$(document).ready(function() {
+    $(".contactCTA").click(function() {
+        $(".overlay").addClass("overlay--visible");
+        $("body").addClass("noscroll");
+    });
+
+    $(".overlay__close").click(function() {
+        $(".overlay").removeClass("overlay--visible");
+        $("body").removeClass("noscroll");
+    })
+})

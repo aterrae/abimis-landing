@@ -2,8 +2,8 @@
 
 $advanced-breakpoints:          false;
 $grid-width-limit-active:       false;
-$grid-width:                    1280px;
-$grid-base-gutter:              24px;
+$grid-width:                    1080px;
+$grid-base-gutter:              0px;
 
 //Grid -- Widths
 
@@ -34,8 +34,8 @@ $smoke:                         #999999;
 $fog:                           #d8d8d8;
 $white:                         #ffffff;
 
-$primary-color:                 #00C26E;
-$secondary-color:               #169CEE;
+$primary-color:                 #ff6c2c;
+$secondary-color:               #5fb2e4;
 $warning-color:                 #F5A623;
 $danger-color:                  #e74c3c;
 $success-color:                 #B8E986;
@@ -52,19 +52,19 @@ $heading-tiny:                  1.5rem;
 
 //Sizes
 
-$button-height:                 36px;
+$button-height:                 48px;
 $button-padding:                0 24px;
 $button-radius:                 6px;
-$field-height:                  40px;
+$field-height:                  48px;
 $field-padding:                 0 20px;
 $field-radius:                  6px;
-$field-background:              rgba(255,255,255,0.2);
+$field-background:              transparent;
 
-$topnav-height:                 64px;
-$topnav-logo-padding:           8px;
+$topnav-height:                 128px;
+$topnav-logo-padding:           16px;
 $topnav-logo-height:            $topnav-height - ($topnav-logo-padding * 2);
-$topnav-color:                  $primary-color;
-$topnav-text-color:             $white;
+$topnav-color:                  $white;
+$topnav-text-color:             $black;
 
 //Misc
 

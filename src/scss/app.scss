@@ -2,5 +2,15 @@
 
 @import 'settings';
 @import 'abimis';
-// Remove the following file when in production
-@import "placeholder";
+@import 'overrides';
+
+@import 'components/cover';
+@import 'components/contact';
+@import 'components/footer';
+@import 'components/overlay';
+
+body {background: $white}
+
+.noscroll {
+    overflow: hidden;
+}

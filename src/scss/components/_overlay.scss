@@ -1,0 +1,38 @@
+.overlay {
+    display: none;
+    background: $white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: #585551;
+    background: lighten($primary-color, 38%);
+    overflow-y: scroll;
+
+    &__content {
+        margin-top: $topnav-height + 96px;
+        @include media-query(lap-up) {
+            margin-top: 0;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+        };
+    }
+
+    &__close {
+        position: absolute;
+        top: $topnav-height + 32px;
+        right: 32px;
+        color: lighten($primary-color, 30%);
+        transition: all 0.3s;
+        cursor: pointer;
+
+        &:hover {
+            color: lighten($primary-color, 20%);
+            transition: all 0.3s;
+        }
+    }
+
+    &--visible {
+        display: block;
+    }
+}

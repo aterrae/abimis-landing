@@ -1,5 +1,6 @@
 .topnav {
     position: relative;
+    overflow: hidden;
 
     &__right {
         div {
@@ -12,10 +13,26 @@
         margin-left: $topnav-logo-padding;
 
         &--right {
+            display: none;
             float: right;
             margin-right: 16px;
             height: $topnav-height / 2;
             margin-top: $topnav-height / 8;
+
+            @include media-query(tab-up) {
+                display: block;
+            };
+        }
+
+        &--mobile {
+            float: right;
+            margin-right: 16px;
+            height: $topnav-height / 2;
+            margin-top: $topnav-height / 8;
+
+            @include media-query(tab-up) {
+                display: none;
+            };
         }
     }
 

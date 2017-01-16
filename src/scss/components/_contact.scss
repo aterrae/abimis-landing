@@ -1,5 +1,9 @@
 .contact {
-    padding: 96px 0 0 0;
+    padding: 96px 0 128px 0;
+
+    @include media-query(tab-up) {
+        padding: 96px 0 64px 0;
+    };
 
     h4 {
         margin-bottom: 64px;

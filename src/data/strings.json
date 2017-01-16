@@ -32,6 +32,16 @@
                 "isSquare": true
             },
             {
+                "name": "twitter",
+                "link": "https://twitter.com/aterraeofficial",
+                "isSquare": true
+            },
+            {
+                "name": "google-plus",
+                "link": "https://plus.google.com/109115089668749566380",
+                "isSquare": true
+            },
+            {
                 "name": "instagram",
                 "link": "https://www.instagram.com/aterrae",
                 "isSquare": false
@@ -39,6 +49,11 @@
             {
                 "name": "linkedin",
                 "link": "https://www.linkedin.com/company/aterrae",
+                "isSquare": true
+            },
+            {
+                "name": "github",
+                "link": "https://github.com/aterrae",
                 "isSquare": true
             }
         ]

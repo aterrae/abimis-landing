@@ -1,6 +1,12 @@
 .cover {
+    height: calc( 100% - #{$topnav-height} - 128px );
+    overflow: scroll;
+
+    @include media-query(tab-up) {
+        height: calc( 100% - #{$topnav-height} - 64px );
+    };
+
     &__tile {
-        // background: url('http://www.thetailgatetimes.com/wp-content/uploads/2016/04/Alexis-Ren-7-1.jpg');
         background-size: cover;
         background-position: center;
         position: relative;

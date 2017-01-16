@@ -1,4 +1,5 @@
-# Abimis - Now you're coding with power
+# Abimis Landing
+Abimis landing is based on the [Abimis framework](https://https://github.com/aterrae/abimis) by [Aterrae](https://aterrae.com)
 
 ### Requirements
 To get started with Abimis you have to get some basic tools ready, these are:
@@ -24,22 +25,12 @@ When you are ready to get a production copy of your work just type
 npm run deploy
 ```
 
-### Addendum
-Abimis supports and recommends the usage of the following patterns and tools to improve consistency when developing your project, you are free to choose weather or not to use them but we think that taking your time to learn more about them can make the difference 😉
-
-##### [EditorConfig](http://editorconfig.org)
->EditorConfig helps developers define and maintain consistent coding styles between different editors and IDEs
->**EditorConfig Website**
-
-Abimis uses editor config to make sure that all of its code is following the same indentation and style rules. If your editor doesn't support it natively you can download the plugin on their website. Here are the plugins for the editors we enjoy the most.
-
-- [Atom](https://github.com/sindresorhus/atom-editorconfig#readme)
-- [Sublime Text](https://github.com/sindresorhus/editorconfig-sublime#readme)
-- [Notepad ++](https://github.com/editorconfig/editorconfig-notepad-plus-plus#readme)
+### Customization
+Abimis landing is highly customizable in a quick and effective way.
+Most of the customization is centered around the strings file located in `src/data/strings.json`, this file manages most of the strings and contents used in the page.
+You can also change many aspects of the style using the SASS settings file located in `src/scss/_settings.scss`.
 
 ---
-Have fun with Abimis! The best front-end framework on the 🌍 and beyond 😉
-
 Made with plenty of ❤️ by two guys from the **Aterrae** team in Rubano (Padova), Italy
 
 Copyright © 2017 Aterrae | Digital Growth.

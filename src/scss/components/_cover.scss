@@ -1,10 +1,14 @@
 .cover {
-    height: calc( 100% - #{$topnav-height} - 128px );
+    height: calc( 100% - #{$topnav-height} );
     overflow: scroll;
 
-    @include media-query(tab-up) {
+    @include media-query(lap-up) {
         height: calc( 100% - #{$topnav-height} - 64px );
     };
+
+    @media (max-height: 400px) {
+        height: calc( 100% - #{$topnav-height / 2} );
+    }
 
     &__tile {
         background-size: cover;
@@ -45,5 +49,9 @@
                 border: 1px solid $secondary-color;
             }
         }
+    }
+
+    &--hidden {
+        display: none;
     }
 }

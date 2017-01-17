@@ -1,5 +1,5 @@
 .footer {
-    position: fixed;
+    // position: fixed;
     width: 100%;
     z-index: 1000;
     background: $white;
@@ -20,7 +20,7 @@
     &__logo {
         line-height: 64px;
         vertical-align: middle;
-        margin-right: 16px;
+        padding: 8px;
         height: 48px;
     }
 

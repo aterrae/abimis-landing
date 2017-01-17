@@ -2,22 +2,40 @@
     position: relative;
     overflow: hidden;
 
+    @media (max-height: 400px) {
+        height: $topnav-height / 2;
+    }
+
     &__right {
         div {
             display: inline-block;
             line-height: $topnav-height;
+
+            @media (max-height: 400px) {
+                line-height: $topnav-height / 2;
+            }
         }
     }
 
     &__logo {
-        margin-left: $topnav-logo-padding;
+        margin-left: 16px;
+
+        @media (max-height: 400px) {
+            padding: $topnav-logo-padding / 2;
+            height: $topnav-logo-height / 2;
+        }
 
         &--right {
             display: none;
             float: right;
             margin-right: 16px;
-            height: $topnav-height / 2;
-            margin-top: $topnav-height / 8;
+            height: $topnav-logo-height;
+            padding: $topnav-logo-padding;
+
+            @media (max-height: 400px) {
+                padding: $topnav-logo-padding / 2;
+                height: $topnav-logo-height / 2;
+            }
 
             @include media-query(tab-up) {
                 display: block;
@@ -28,7 +46,6 @@
             float: right;
             margin-right: 16px;
             height: $topnav-height / 2;
-            margin-top: $topnav-height / 8;
 
             @include media-query(tab-up) {
                 display: none;

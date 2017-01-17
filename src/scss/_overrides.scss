@@ -43,9 +43,10 @@
         }
 
         &--mobile {
+            margin: 0;
             float: right;
-            margin-right: 16px;
-            height: $topnav-height / 2;
+            padding: $topnav-logo-padding;
+            height: $topnav-logo-height;
 
             @include media-query(tab-up) {
                 display: none;

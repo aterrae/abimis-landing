@@ -7,6 +7,7 @@
     color: #585551;
     background: lighten($primary-color, 38%);
     overflow-y: scroll;
+    word-wrap: break-word;
 
     &__content {
         margin-top: $topnav-height + 96px;

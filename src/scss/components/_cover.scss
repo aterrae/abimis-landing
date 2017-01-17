@@ -1,6 +1,5 @@
 .cover {
     height: calc( 100% - #{$topnav-height} );
-    overflow: scroll;
 
     @include media-query(lap-up) {
         height: calc( 100% - #{$topnav-height} - 64px );
@@ -40,13 +39,24 @@
 
             &--primary {
                 border: 1px solid $primary-color;
+
                 a {
-                    background: $primary-color
+                    position: absolute;
+                    bottom: 16px;
+                    left: 50%;
+                    transform: translateX(-50%);
                 }
             }
 
             &--secondary {
                 border: 1px solid $secondary-color;
+
+                a {
+                    position: absolute;
+                    bottom: 16px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
             }
         }
     }

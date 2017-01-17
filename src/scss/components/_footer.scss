@@ -1,11 +1,10 @@
 .footer {
-    // position: fixed;
     width: 100%;
     z-index: 1000;
     background: $white;
 
     @include media-query(desk) {
-        position: absolute;
+        position: fixed;
         padding: 0 32px;
         box-sizing: border-box;
     };

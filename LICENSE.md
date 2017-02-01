@@ -1,7 +1,6 @@
+MIT License
 
-The MIT License (MIT)
-
-Copyright (c) 2017 Ayoub Aabass
+Copyright (c) 2017 Aterrae | Digital Growth
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

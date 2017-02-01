@@ -1,7 +1,7 @@
 {
   "name": "abimis",
   "version": "0.1.0",
-  "description": "Abimis is a framework made by the Aterrae team for the modern front-end development of wonderful websites and mezmerizing web applications that really matter http://abimis.aterrae.com",
+  "description": "Abimis is a framework made by the Aterrae team for the modern front-end development of wonderful websites and mezmerizing web applications that really matter https://abimis.aterrae.com",
   "main": [
     "gulpfile.babel.js"
 
@@ -15,10 +15,10 @@
     "framework"
   ],
   "authors": [
-    "Aterrae | Digital Growth <info@aterrae.com> (http://aterrae.com)"
+    "Aterrae | Digital Growth <info@aterrae.com> (https://aterrae.com)"
   ],
   "license": "MIT",
-  "homepage": "http://abimis.aterrae.com",
+  "homepage": "https://abimis.aterrae.com",
   "private": false,
   "ignore": [
     ".gitignore",

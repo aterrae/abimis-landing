@@ -1,7 +1,7 @@
 {
   "name": "abimis",
   "version": "0.1.0",
-  "description": "Abimis is a framework made by the Aterrae team for the modern front-end development of wonderful websites and mezmerizing web applications that really matter http://abimis.aterrae.com",
+  "description": "Abimis is a framework made by the Aterrae team for the modern front-end development of wonderful websites and mezmerizing web applications that really matter https://abimis.aterrae.com",
   "main": "gulpfile.babel.js",
   "scripts": {
     "start": "gulp",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://bitbucket.org/aterrae/abimis-sites#readme"
+    "url": "https://github.com/aterrae/abimis"
   },
   "keywords": [
     "abimis",
@@ -20,13 +20,13 @@
     "framework"
   ],
   "bugs": {
-    "url": "https://bitbucket.org/aterrae/abimis-sites/issues?status=new&status=open",
+    "url": "https://github.com/aterrae/abimis/issues",
     "email": "info@aterrae.com"
   },
-  "author": "Aterrae | Digital Growth <info@aterrae.com> (http://aterrae.com)",
+  "author": "Aterrae | Digital Growth <info@aterrae.com> (https://aterrae.com)",
   "license": "MIT",
   "private": false,
-  "homepage": "http://abimis.aterrae.com",
+  "homepage": "https://abimis.aterrae.com",
   "devDependencies": {
     "babel-core": "^6.21.0",
     "babel-plugin-transform-es2015-arrow-functions": "^6.8.0",

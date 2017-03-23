@@ -1,8 +1,8 @@
 <section class="cover">
     <div class="grid text-align--center">
-        {{> landing_cover_cell content=strings.tiles.[0] }}
-        {{#if strings.settings.doubleCover}}
-        {{> landing_cover_cell content=strings.tiles.[1] }}
+        {{> landing_cover_cell content=strings.tiles.[0]}}
+        {{#if strings.doubleCover}}
+        {{> landing_cover_cell content=strings.tiles.[1]}}
         {{/if}}
     </div>
     <div class="contact">
@@ -11,25 +11,25 @@
                 <h4 class="padding-sides">{{{strings.contactTitle}}}</h4>
             </div>
 
-            <form action="{{{strings.settings.mailchimpListUrl}}}" method="POST" name="mc-embedded-subscribe-form" id="mc-form" target="_blank" novalidate>
+            <form action="{{strings.form.mailchimpListUrl}}" method="POST" name="mc-embedded-subscribe-form" id="mc-form" target="_blank" novalidate>
                 <div class="grid__cell phone-up-1of1 desk-3of10">
-                    <input type="email" name="EMAIL" value="" placeholder="E-mail" class="phone-up-5of6 push--lap-1of4 lap-1of2 desk-5of6 push--global-1of12">
+                    <input type="email" name="EMAIL" value="" placeholder="{{strings.form.email}}" class="phone-up-5of6 push--lap-1of4 lap-1of2 desk-5of6 push--global-1of12">
                 </div>
                 <div class="grid__cell phone-up-1of1 desk-3of10">
-                    <input type="text" name="FNAME" value="" placeholder="Nome" class="phone-up-5of6 push--lap-1of4 lap-1of2 desk-5of6 push--global-1of12">
+                    <input type="text" name="FNAME" value="" placeholder="{{strings.form.name}}" class="phone-up-5of6 push--lap-1of4 lap-1of2 desk-5of6 push--global-1of12">
                 </div>
                 <div class="grid__cell phone-up-1of1 desk-3of10">
-                    <input type="text" name="LNAME" value="" placeholder="Cognome" class="phone-up-5of6 push--lap-1of4 lap-1of2 desk-5of6 push--global-1of12">
+                    <input type="text" name="LNAME" value="" placeholder="{{strings.form.surname}}" class="phone-up-5of6 push--lap-1of4 lap-1of2 desk-5of6 push--global-1of12">
                 </div>
                 <div style="position: absolute; left: -5000px;" aria-hidden="true">
                     <input type="text" name="b_75afb8568f065242c10757684_160753883e" tabindex="-1" value="">
                 </div>
                 <div class="grid__cell phone-up-1of3 push--phone-1of3 push--phablet-1of3 push--tab-1of3 push--lap-1of3 desk-1of10">
-                    <input type="submit" name="subscribe" value="SEND" class="button global-1of1">
+                    <input type="submit" name="subscribe" value={{strings.form.send}} class="button global-1of1">
                 </div>
             </form>
         </div>
 
-        {{>landing_footer}}
+        {{> landing_footer}}
     </div>
 </section>

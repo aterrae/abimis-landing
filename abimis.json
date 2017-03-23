@@ -1,0 +1,11 @@
+{
+  "name": "abimis-landing",
+  "version": "0.1.0",
+  "main": [
+    "src"
+  ],
+  "bower": [],
+  "npm": [],
+  "sass": [],
+  "js": []
+}

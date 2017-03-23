@@ -1,5 +1,7 @@
 # Changelog
 
-## Version 0.1.0 (March 13, 2016)
+## v0.1.0 (January 14, 2017)
 
-Initial release.
+### Added
+
+- Started Development.

@@ -3,13 +3,16 @@
 @import 'settings';
 @import 'abimis';
 @import 'overrides';
+// These files are used by Animate-SASS
+@import 'animate-settings';
+@import 'animate';
 
 @import 'components/cover';
 @import 'components/contact';
 @import 'components/footer';
 @import 'components/overlay';
 
-body {background: $white}
+body { background: $white; }
 
 .noscroll {
     overflow: hidden;

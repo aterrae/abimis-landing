@@ -1,11 +1,11 @@
-<div class="grid__cell phone-up-1of1 {{#if strings.settings.doubleCover }}tab-up-1of2{{/if}}">
+<div class="grid__cell phone-up-1of1 {{#if strings.doubleCover }}tab-up-1of2{{/if}}">
     <div class="cover__tile" style="background: url({{content.background}}) no-repeat center; background-size:cover">
         <div class="cover__tile__box cover__tile__box--{{content.style}}">
             <div class="cover__title__content v-align">
                 <h4>{{{content.headline}}}</h4>
                 <h5>{{{content.caption}}}</h5>
             </div>
-            <a class="contactCTA button button--{{content.style}}">CONTATTACI</a>
+            <a class="contactCTA button button--{{content.style}}">{{content.callToAction}}</a>
         </div>
     </div>
 </div>

@@ -1,5 +1,5 @@
 # Abimis - Landing
-Abimis landing is a package for the [Abimis framework](https://https://github.com/aterrae/abimis) by [Aterrae](https://aterrae.com)
+Abimis landing is a package for the [Abimis framework](https://github.com/aterrae/abimis) by [Aterrae](https://aterrae.com)
 
 ### Getting started
 First things first, install the Abimis framework by cloning the repo.

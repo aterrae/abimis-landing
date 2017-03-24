@@ -66,8 +66,8 @@
   "contactModal": {
     "title": "Lorem ipsum dolor!",
     "message": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et <strong>(+39) 0285 7389 927</strong>",
-    "phone": "0285 7389 927",
-    "mail": "info@placeholder.com",
+    "phone": "+390492612270",
+    "mail": "info@aterrae.com",
     "info-1": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et",
     "info-2": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et"
   }

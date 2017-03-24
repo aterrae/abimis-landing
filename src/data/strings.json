@@ -5,31 +5,31 @@
   "doubleCover": true,
   "tiles": [
     {
-      "headline": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo",
+      "headline": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       "caption": "Lorem ipsum.",
       "callToAction": "CONTACT US",
       "background": "https://images.pexels.com/photos/6552/nature-person-red-woman.jpg?w=1260&h=750&auto=compress&cs=tinysrgb",
       "style": "primary"
     },
     {
-      "headline": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo",
+      "headline": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       "caption": "Lorem ipsum.",
       "callToAction": "CONTACT US",
       "background": "https://images.pexels.com/photos/67475/pexels-photo-67475.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb",
       "style": "secondary"
     }
   ],
-  "contactTitle": "Lorem ipsum dolor.<br>Lorem ipsum dolor sit amet, consectetuer.",
+  "contactTitle": "Lorem ipsum dolor sit amet.<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
   "form": {
     "mailchimpListUrl": "",
     "email": "E-mail",
-    "name": "Nome",
-    "surname": "Cognome",
-    "send": "INVIA"
+    "name": "Name",
+    "surname": "Surname",
+    "send": "SEND"
   },
   "copyright": "Copyright © 2017 Aterrae | Digital Growth.",
   "social": {
-    "title": "Seguici su",
+    "title": "Follow us on",
     "items": [
       {
         "name": "facebook",
@@ -64,11 +64,13 @@
     ]
   },
   "contactModal": {
-    "title": "Lorem ipsum dolor!",
-    "message": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et <strong>(+39) 0285 7389 927</strong>",
+    "title": "Lorem ipsum dolor sit amet!",
+    "message": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "callUs": "CALL US",
     "phone": "+390492612270",
+    "writeUs": "WRITE US",
     "mail": "info@aterrae.com",
-    "info-1": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et",
-    "info-2": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et"
+    "info-1": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "info-2": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
   }
 }

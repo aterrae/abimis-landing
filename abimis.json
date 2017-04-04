@@ -4,8 +4,7 @@
   "main": [
     "src"
   ],
-  "bower": [],
-  "npm": [],
+  "dependencies": [],
   "sass": [],
   "js": []
 }

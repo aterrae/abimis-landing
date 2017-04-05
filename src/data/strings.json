@@ -2,6 +2,28 @@
   "projectName":"Aterrae - WIP landing",
   "logo": "https://placehold.it/128x128?text=LOGO",
   "logo-footer": "https://placehold.it/64x64?text=LOGO+FOOTER",
+  "countdown": {
+    "active": true,
+    "deadline": "2017-12-31",
+    "background": "https://static.pexels.com/photos/126313/pexels-photo-126313.jpeg",
+    "outline": true,
+    "days": {
+      "active": true,
+      "label": "Days"
+    },
+    "hours": {
+      "active": true,
+      "label": "Hours"
+    },
+    "minutes": {
+      "active": true,
+      "label": "Minutes"
+    },
+    "seconds": {
+      "active": true,
+      "label": "Seconds"
+    }
+  },
   "doubleCover": true,
   "tiles": [
     {

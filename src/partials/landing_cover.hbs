@@ -1,8 +1,13 @@
 <section class="cover">
     <div class="grid text-align--center">
+        {{#if strings.countdown.active}}
+            {{> landing_countdown content=strings.countdown}}
+        {{/if}}
+
         {{> landing_cover_cell content=strings.tiles.[0]}}
+
         {{#if strings.doubleCover}}
-        {{> landing_cover_cell content=strings.tiles.[1]}}
+            {{> landing_cover_cell content=strings.tiles.[1]}}
         {{/if}}
     </div>
     <div class="contact">

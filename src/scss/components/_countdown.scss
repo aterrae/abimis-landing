@@ -1,0 +1,41 @@
+.countdown {
+    &__box {
+        border-color: $white;
+    }
+
+    &__content {
+        h2 {
+            font-size: 4rem;
+        }
+    }
+
+    &__cell {
+        display: inline-block;
+        background: rgba(0,0,0,0.4);
+        padding: 8px;
+        border-radius: 4px;
+        margin-bottom: 8px;
+
+        span {
+            display: block;
+            line-height: 4rem;
+            background: rgba(0,0,0,0.6);
+            padding: 16px;
+            border-radius: 4px;
+            min-width: 64px;
+        }
+
+        small {
+            margin-top: 8px;
+            font-size: 2rem;
+            display: block;
+        }
+    }
+
+    &--outline {
+        .countdown__cell, .countdown__cell span {
+            background: transparent;
+            border: 1px solid $white;
+        }
+    }
+}

@@ -1,4 +1,2 @@
-# This file is needed in order to make sure that git doesn't deem our
-# precious little empty directories and the files that that racist fella
-# deems "useless", after all we are the ones that know our files and nobody
-# can tell them that they are useless! #FreeDirectories.
+# Git tracks only files, so it doesn't add or it removes empty directories from repositories
+# .gitkeep file is just a hack to keep empty directories in the repository

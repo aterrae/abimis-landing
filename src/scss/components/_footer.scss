@@ -1,64 +1,71 @@
 .footer {
-    width: 100%;
-    z-index: 1000;
-    background: $white;
+  border-top: 1px solid map-get($colors, 'fog');
+  background: map-get($colors, 'white');
 
-    @include media-query(desk) {
-        position: fixed;
-        padding: 0 32px;
-        box-sizing: border-box;
+  &__left {
+    text-align: center;
+
+    @include media-query(tab-up) {
+      text-align: left;
+
+      &__logo {
+        margin-left: 32px;
+      }
     };
 
-    overflow: hidden;
-    bottom: 0;
-    line-height: 100%;
-    border-top: 1px solid $fog;
-    color: #585551;
-    font-size: 1.4rem;
-
     &__logo {
-        line-height: 64px;
-        vertical-align: middle;
-        padding: 8px;
-        height: 48px;
+      height: 48px;
+      padding: 8px 0;
     }
 
-    &__left {
-        text-align: center;
-        height: 64px;
-        @include media-query(lap-up) {
-            text-align: left;
-        };
+    &__copyright {
+      font-size: 1rem;
+
+      display: inline-block;
+
+      margin-left: 16px;
     }
 
-    &__right {
-        text-align: center;
-        height: 64px;
-        background: $fog;
-        @include media-query(lap-up) {
-            text-align: right;
-            background: $white;
-        };
-
-        p {
-            line-height: 64px;
-            vertical-align: middle;
-        }
-
-        i {
-            padding: 0 16px;
-            font-size: 24px;
-            line-height: 64px;
-            color: #585551;
-
-            &:hover {
-                color: $secondary-color;
-            }
-        }
+    & > * {
+      vertical-align: middle;
     }
 
     p {
-        display: inline-block;
-        line-height: 64px;
+      margin-bottom: 0;
     }
+  }
+
+  &__right {
+    text-align: center;
+
+    @include media-query(tab-up) {
+      text-align: right;
+
+      a {
+        &:last-of-type {
+          margin-right: 32px;
+        }
+      }
+    }
+
+    p {
+      line-height: 64px;
+
+      display: inline-block;
+
+      margin-right: 16px;
+      margin-bottom: 0;
+    }
+
+
+    i {
+      margin-left: 8px;
+
+      color: map-get($colors, 'primary');
+
+      &:hover {
+        color: map-get($colors, 'secondary');
+      }
+    }
+  }
 }

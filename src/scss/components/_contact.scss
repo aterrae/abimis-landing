@@ -1,29 +1,15 @@
 .contact {
-    padding: 96px 0 0 0;
+  padding: 32px;
 
-    @include media-query(lap-up) {
-        padding: 96px 0 64px 0;
-
-        @media (max-height: 400px) {
-            padding: 96px 0 0 0;
-        }
-    };
-
-    h4 {
-        margin-bottom: 64px;
-    }
+  @include media-query(lap-up) {
+    padding: 64px;
 
     input {
-        margin-top: 16px;
-        border-width: 0 0 2px 0;
-        border-radius: 0;
-
-        &:focus {
-            border-width: 0 0 2px 0;
-        }
-
-        &[type=submit] {
-            margin-bottom: 32px;
-        }
+      margin-top: 32px;
     }
+  };
+
+  input {
+    margin-top: 32px;
+  }
 }

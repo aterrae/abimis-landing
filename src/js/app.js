@@ -1,80 +1,59 @@
 import STRINGS from '../data/strings';
 
-function getMobileOperatingSystem() {
-    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-
-    if (/windows phone/i.test(userAgent)) {
-        return "Windows Phone";
-    }
-
-    if (/android/i.test(userAgent)) {
-        return "Android";
-    }
-
-    if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-        return "iOS";
-    }
-
-    return "unknown";
+function ready(callbackFunc) {
+  if (document.readyState !== 'loading') {
+    // Document is already ready
+    callbackFunc();
+  } else if (document.addEventListener) {
+    // Register to DOMContentLoaded (modern browsers)
+    document.addEventListener('DOMContentLoaded', callbackFunc);
+  } else {
+    // Old IE browsers fallback
+    document.attachEvent('onreadystatechange', () => {
+      if (document.readyState === 'complete') {
+        callbackFunc();
+      }
+    });
+  }
 }
 
-$(document).ready(function() {
-    if (getMobileOperatingSystem() == "iOS") {
-        document.getElementsByClassName('overlay')[0].addEventListener('touchstart', function(event){
-            this.allowUp = (this.scrollTop > 0);
-            this.allowDown = (this.scrollTop < this.scrollHeight - this.clientHeight);
-            this.prevTop = null; this.prevBot = null;
-            this.lastY = event.pageY;
-        });
+function getTimeRemaining(endtime) {
+  const offset = Date.parse(endtime) - Date.parse(new Date());
+  const parsedOffset = {};
+  parsedOffset.total = offset;
+  parsedOffset.seconds = Math.floor((offset / 1000) % 60);
+  parsedOffset.minutes = Math.floor((offset / 1000 / 60) % 60);
+  parsedOffset.hours = Math.floor((offset / (1000 * 60 * 60)) % 24);
+  parsedOffset.days = Math.floor(offset / (1000 * 60 * 60 * 24));
+  return parsedOffset;
+}
 
-        document.getElementsByClassName('overlay')[0].addEventListener('touchmove', function(event){
-            var up = (event.pageY > this.lastY), down = !up;
-            this.lastY = event.pageY;
-
-            if ((up && this.allowUp) || (down && this.allowDown)) event.stopPropagation();
-            else event.preventDefault();
-        });
+function initializeClock(id, endtime) {
+  const clock = document.getElementById(id);
+  const days = clock.querySelector('#cdd');
+  const hours = clock.querySelector('#cdh');
+  const minutes = clock.querySelector('#cdm');
+  const seconds = clock.querySelector('#cds');
+  const timeinterval = setInterval(() => {
+    const offset = getTimeRemaining(endtime);
+    if (days) days.innerHTML = offset.days;
+    if (hours) hours.innerHTML = offset.hours;
+    if (minutes) minutes.innerHTML = offset.minutes;
+    if (seconds) seconds.innerHTML = offset.seconds;
+    if (offset.total <= 0) {
+      clearInterval(timeinterval);
     }
+  }, 1000);
+}
 
-    $(".contactCTA").click(function() {
-        $(".overlay").addClass("overlay--visible");
-        $("body").addClass("noscroll");
-        $(".cover").addClass("cover--hidden");
-    });
+ready(() => {
+  initializeClock('cd', STRINGS.cover.countdown.deadline);
 
-    $(".overlay__close").click(function() {
-        $(".overlay").removeClass("overlay--visible");
-        $("body").removeClass("noscroll");
-        $(".cover").removeClass("cover--hidden");
+  const overlayButtons = document.querySelectorAll('#cta-overlay');
+  [].forEach.call(overlayButtons, (button) => {
+    button.addEventListener('click', () => {
+      document.querySelector('.overlay').classList.toggle('overlay--visible');
+      document.body.classList.toggle('noscroll');
     });
-    initializeClock('countdown', STRINGS.countdown.deadline);
+  });
 });
-
-function getTimeRemaining(endtime){
-    var offset = Date.parse(endtime) - Date.parse(new Date());
-    var parsedOffset = {};
-    parsedOffset.total = offset;
-    parsedOffset.seconds = Math.floor( (offset/1000) % 60 );
-    parsedOffset.minutes = Math.floor( (offset/1000/60) % 60 );
-    parsedOffset.hours = Math.floor( (offset/(1000*60*60)) % 24 );
-    parsedOffset.days = Math.floor( offset/(1000*60*60*24) );
-    return parsedOffset;
-}
-
-function initializeClock(id, endtime){
-    var clock = document.getElementById(id);
-    var days = clock.querySelector('#countdown_days')
-    var hours = clock.querySelector('#countdown_hours')
-    var minutes = clock.querySelector('#countdown_minutes')
-    var seconds = clock.querySelector('#countdown_seconds')
-    var timeinterval = setInterval(function(){
-        var offset = getTimeRemaining(endtime);
-        days ? days.innerHTML = offset.days : null;
-        hours ? hours.innerHTML = offset.hours : null;
-        minutes ? minutes.innerHTML = offset.minutes : null;
-        seconds ? seconds.innerHTML = offset.seconds : null;
-        if(offset.total<=0){
-            clearInterval(timeinterval);
-        }
-    },1000);
-}

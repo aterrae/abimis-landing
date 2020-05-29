@@ -1,10 +1,13 @@
-<nav class="topnav">
-    <img class="topnav__logo" src="{{strings.logo}}" alt="Logo">
-    <div class="topnav__right">
-        <div>By</div>
-        <a href="https://aterrae.com" target="_blank">
-            <img class="topnav__logo topnav__logo--right" src="assets/img/aterrae.png" alt="Aterrae">
-            <img class="topnav__logo topnav__logo--mobile" src="assets/img/aterrae-small.png" alt="Aterrae">
-        </a>
-    </div>
+<nav class="navbar navbar--fixed">
+  {{!-- TODO: find a way to fix this inline styling --}}
+  <a class="navbar__logo navbar__menu--left" style="height: 64px;">
+    <img src="{{ strings.logo }}" alt="Logo" />
+  </a>
+
+  <ul class="navbar__logo navbar__menu--right">
+    <a href="https://aterrae.com" target="_blank">
+      by
+      <img class="" src="https://aterrae-cdn.s3.amazonaws.com/aterrae/circle-dark.png" alt="Aterrae" />
+    </a>
+  </ul>
 </nav>

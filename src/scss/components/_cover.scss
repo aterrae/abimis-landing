@@ -1,72 +1,63 @@
 .cover {
-    height: calc( 100% - #{$topnav-height} );
+  margin-top: $navbar-height;
 
-    @include media-query(lap-up) {
-        height: calc( 100% - #{$topnav-height} - 64px );
-    };
+  &__tile {
+    position: relative;
 
-    @media (max-height: 400px) {
-        height: calc( 100% - #{$topnav-height / 2} );
+    box-sizing: border-box;
+    height: calc(100vh - #{$navbar-height});
+    padding: 32px;
+
+    color: map-get($colors, 'white');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+
+      content: '';
+
+      background: rgba(0, 0, 0, .4);
     }
 
-    &__tile {
-        background-size: cover;
-        background-position: center;
-        position: relative;
+    &__box {
+      position: relative;
 
-        height: 384px;
-        box-sizing: border-box;
-        padding: 16px;
-        color: $white;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
 
-        &::before {
-            content: '';
-            display: block;
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.2);
-        }
+      box-sizing: border-box;
+      width: 100%;
+      height: 100%;
 
-        &__box {
-            box-sizing: border-box;
-            height: 100%;
-            width: 100%;
-            border: 1px solid $primary-color;
-            position: relative;
+      border: 1px solid map-get($colors, 'white');
 
-            &--primary {
-                border: 1px solid $primary-color;
+      &--primary {
+        border: 1px solid map-get($colors, 'primary');
+      }
 
-                a {
-                    position: absolute;
-                    bottom: 16px;
-                    left: 50%;
-                    transform: translateX(-50%);
-                }
-            }
+      &--secondary {
+        border: 1px solid map-get($colors, 'secondary');
+      }
 
-            &--secondary {
-                border: 1px solid $secondary-color;
+      a {
+        margin-top: 32px;
+      }
 
-                a {
-                    position: absolute;
-                    bottom: 16px;
-                    left: 50%;
-                    transform: translateX(-50%);
-                }
-            }
-        }
-
-        &__content {
-            max-width: 1080px;
-            margin: 0 auto;
-        }
+      &__content {
+        max-width: 1080px;
+      }
     }
 
     &--hidden {
-        display: none;
+      display: none;
     }
+  }
 }

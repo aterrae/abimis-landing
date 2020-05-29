@@ -1,41 +1,43 @@
 .countdown {
-    &__box {
-        border-color: $white;
+  & .cover__title__content {
+    h2 {
+      font-size: 4rem;
+    }
+  }
+
+  &__item {
+    display: inline-block;
+
+    padding: 8px;
+
+    border: 1px solid rgba(0, 0, 0, .6);
+    border-radius: 4px;
+    background: rgba(0, 0, 0, .6);
+
+    span {
+      display: block;
+
+      min-width: 64px;
+      padding: 16px;
+
+      border: 1px solid rgba(0, 0, 0, .6);
+      border-radius: 4px;
+      background: rgba(0, 0, 0, .6);
     }
 
-    &__content {
-        h2 {
-            font-size: 4rem;
-        }
+    small {
+      font-size: 2rem;
+
+      display: block;
+
+      margin-top: 16px;
     }
+  }
 
-    &__cell {
-        display: inline-block;
-        background: rgba(0,0,0,0.4);
-        padding: 8px;
-        border-radius: 4px;
-        margin-bottom: 8px;
-
-        span {
-            display: block;
-            line-height: 4rem;
-            background: rgba(0,0,0,0.6);
-            padding: 16px;
-            border-radius: 4px;
-            min-width: 64px;
-        }
-
-        small {
-            margin-top: 8px;
-            font-size: 2rem;
-            display: block;
-        }
+  &--outline {
+    .countdown__item, .countdown__item span {
+      border-color: map-get($colors, 'white');
+      background: transparent;
     }
-
-    &--outline {
-        .countdown__cell, .countdown__cell span {
-            background: transparent;
-            border: 1px solid $white;
-        }
-    }
+  }
 }

@@ -1,0 +1,2 @@
+# Git tracks only files, so it doesn't add or it removes empty directories from repositories
+# .gitkeep file is just a hack to keep empty directories in the repository

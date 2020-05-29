@@ -1,43 +1,52 @@
 .overlay {
-    display: none;
-    background: $white;
-    position: fixed;
-    top: 0;
-    left: 0;
-    color: #585551;
-    background: lighten($primary-color, 38%);
-    overflow-y: scroll;
-    word-wrap: break-word;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 
-    &__content {
-        margin-top: $topnav-height + 96px;
-        @include media-query(lap-up) {
-            margin-top: 0;
-            position: relative;
-            top: 50%;
-            transform: translateY(-50%);
-        };
-        @media (max-height: 400px) {
-            margin-top: $topnav-height + 96px;
-        }
+  display: none;
+  overflow-y: scroll;
+
+  word-wrap: break-word;
+
+  color: map-get($colors, 'white');
+  background: lighten(map-get($colors, 'primary'), 40%);
+
+  &__content {
+    margin-top: $navbar-height + 96px;
+
+    @include media-query(lap-up) {
+      position: relative;
+      top: 50%;
+
+      margin-top: 0;
+
+      transform: translateY(-50%);
+    };
+  }
+
+  &__close {
+    position: absolute;
+    z-index: 1000;
+    top: $navbar-height + 32px;
+    right: 32px;
+
+    cursor: pointer;
+    transition: all .3s;
+
+    color: map-get($colors, 'white');
+
+    &:hover {
+      color: map-get($colors, 'secondary');
     }
+  }
 
-    &__close {
-        z-index: 1000;
-        position: absolute;
-        top: $topnav-height + 32px;
-        right: 32px;
-        color: lighten($primary-color, 30%);
-        transition: all 0.3s;
-        cursor: pointer;
+  &--visible {
+    display: block;
+  }
+}
 
-        &:hover {
-            color: lighten($primary-color, 20%);
-            transition: all 0.3s;
-        }
-    }
-
-    &--visible {
-        display: block;
-    }
+.noscroll {
+  overflow: hidden;
 }

@@ -1,0 +1,37 @@
+<div class="grid__cell phone-up-1of1 countdown {{#if content.countdown.outline}}countdown--outline{{/if}}">
+  <div class="cover__tile" style="background-image: url({{content.background}});">
+    <div class="cover__tile__box">
+      <div class="cover__title__content text-align--center">
+        <h2 id="cd">
+          {{#if content.countdown.days.visible}}
+          <div class="countdown__item">
+            <span id="cdd">0</span>
+            <small>{{ content.countdown.days.label }}</small>
+          </div>
+          {{/if}}
+
+          {{#if content.countdown.hours.visible}}
+          <div class="countdown__item">
+            <span id="cdh">0</span>
+            <small>{{ content.countdown.hours.label }}</small>
+          </div>
+          {{/if}}
+
+          {{#if content.countdown.minutes.visible}}
+          <div class="countdown__item">
+            <span id="cdm">0</span>
+            <small>{{ content.countdown.minutes.label }}</small>
+          </div>
+          {{/if}}
+
+          {{#if content.countdown.seconds.visible}}
+          <div class="countdown__item">
+            <span id="cds">0</span>
+            <small>{{ content.countdown.seconds.label }}</small>
+          </div>
+          {{/if}}
+        </h2>
+      </div>
+    </div>
+  </div>
+</div>

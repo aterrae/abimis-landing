@@ -1,44 +1,53 @@
 {
-  "projectName":"Aterrae - WIP landing",
-  "logo": "https://placehold.it/128x128?text=LOGO",
-  "logo-footer": "https://placehold.it/64x64?text=LOGO+FOOTER",
-  "countdown": {
-    "active": true,
-    "deadline": "2017-12-31",
-    "background": "https://static.pexels.com/photos/126313/pexels-photo-126313.jpeg",
-    "outline": true,
-    "days": {
+  "projectName": "Aterrae - WIP landing",
+  "logo": "http://acmelogos.com/images/logo-7.svg",
+  "logoFooter": "http://acmelogos.com/images/logo-3.svg",
+  "cover": {
+    "style": "",
+    "headline": "Lorem ipsum dolor sit amet, consectetur",
+    "caption": "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
+    "callToAction": "CONTACT US",
+    "background": "https://images.pexels.com/photos/214575/pexels-photo-214575.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+    "countdown": {
       "active": true,
-      "label": "Days"
-    },
-    "hours": {
-      "active": true,
-      "label": "Hours"
-    },
-    "minutes": {
-      "active": true,
-      "label": "Minutes"
-    },
-    "seconds": {
-      "active": true,
-      "label": "Seconds"
+      "deadline": "2021-01-01",
+      "outline": true,
+      "days": {
+        "visible": true,
+        "label": "Days"
+      },
+      "hours": {
+        "visible": true,
+        "label": "Hours"
+      },
+      "minutes": {
+        "visible": true,
+        "label": "Minutes"
+      },
+      "seconds": {
+        "visible": true,
+        "label": "Seconds"
+      }
     }
   },
-  "doubleCover": true,
   "tiles": [
     {
-      "headline": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "caption": "Lorem ipsum.",
+      "visible": true,
+      "halfSize": true,
+      "style": "primary",
+      "headline": "Lorem ipsum dolor sit amet, consectetur",
+      "caption": "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
       "callToAction": "CONTACT US",
-      "background": "https://images.pexels.com/photos/6552/nature-person-red-woman.jpg?w=1260&h=750&auto=compress&cs=tinysrgb",
-      "style": "primary"
+      "background": "https://images.pexels.com/photos/214574/pexels-photo-214574.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
     },
     {
-      "headline": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "caption": "Lorem ipsum.",
+      "visible": true,
+      "halfSize": true,
+      "style": "secondary",
+      "headline": "Lorem ipsum dolor sit amet, consectetur",
+      "caption": "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
       "callToAction": "CONTACT US",
-      "background": "https://images.pexels.com/photos/67475/pexels-photo-67475.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb",
-      "style": "secondary"
+      "background": "https://images.pexels.com/photos/214572/pexels-photo-214572.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
     }
   ],
   "contactTitle": "Lorem ipsum dolor sit amet.<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
@@ -49,39 +58,33 @@
     "surname": "Surname",
     "send": "SEND"
   },
-  "copyright": "Copyright © 2017 Aterrae | Digital Growth.",
+  "copyright": "Copyright © 2020 Aterrae | Digital Growth",
   "social": {
-    "title": "Follow us on",
+    "title": "Follow us on:",
     "items": [
       {
         "name": "facebook",
-        "link": "https://www.facebook.com/aterrae",
-        "isSquare": true
-      },
-      {
-        "name": "twitter",
-        "link": "https://twitter.com/aterraeofficial",
-        "isSquare": true
-      },
-      {
-        "name": "google-plus",
-        "link": "https://plus.google.com/109115089668749566380",
-        "isSquare": true
+        "link": "https://www.facebook.com/aterrae"
       },
       {
         "name": "instagram",
-        "link": "https://www.instagram.com/aterrae",
-        "isSquare": false
+        "link": "https://www.instagram.com/aterrae"
+      },
+      {
+        "name": "twitter",
+        "link": "https://twitter.com/aterraeofficial"
+      },
+      {
+        "name": "google-plus",
+        "link": "https://plus.google.com/109115089668749566380"
       },
       {
         "name": "linkedin",
-        "link": "https://www.linkedin.com/company/aterrae",
-        "isSquare": true
+        "link": "https://www.linkedin.com/company/aterrae"
       },
       {
         "name": "github",
-        "link": "https://github.com/aterrae",
-        "isSquare": true
+        "link": "https://github.com/aterrae"
       }
     ]
   },
@@ -92,7 +95,7 @@
     "phone": "+390492612270",
     "writeUs": "WRITE US",
     "mail": "info@aterrae.com",
-    "info-1": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "info-2": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    "infoOne": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "infoTwo": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
   }
 }

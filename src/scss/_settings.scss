@@ -1,72 +1,475 @@
-//Grid
+//---------------- SPACES --------------- //
 
-$advanced-breakpoints:          false;
-$grid-width-limit-active:       false;
-$grid-width:                    1080px;
-$grid-base-gutter:              0px;
+$spaces: (
+    "xxl":                                                                      4.8rem,
+    "xl":                                                                       3.2rem,
+    "l":                                                                        2.4rem,
+    "m":                                                                        1.6rem,
+    "s":                                                                        0.8rem,
+    "xs":                                                                       0.4rem,
+    "xxs":                                                                      0.2rem
+) !default;
 
-//Grid -- Widths
+//---------------- GRIDS & MEDIA QUERIES --------------- //
 
-$phone-S:                       360px;
-$phone-M:                       400px;
-$phone-L:                       480px;
-$tab-S:                         600px;
-$tab-M:                         720px;
-$tab-L:                         840px;
-$tab-XL:                        960px;
-$desk-S:                        1024px;
-$desk-M:                        1280px;
-$desk-L:                        1440px;
-$desk-XL:                       1600px;
+// grid
 
-$phone:                         $phone-S;
-$phablet:                       $phone-M;
-$tab:                           $tab-S;
-$lap:                           $desk-S;
-$desk:                          $desk-M;
+$advanced-breakpoints:                                                          false !default;
+$grid-width-limit-active:                                                       false !default;
+$grid-width-limit:                                                              1280px !default;
+$grid-medium-gutter:                                                            map-get($spaces, 'm') !default;
+$grid-large-gutter:                                                             map-get($spaces, 'l') !default;
 
-//Colors
+// media queries
 
-$black:                         #000000;
-$coal:                          #333333;
-$carbon:                        #666666;
-$smoke:                         #999999;
-$fog:                           #d8d8d8;
-$white:                         #ffffff;
+$phone-S:                                                                       360px !default;
+$phone-M:                                                                       400px !default;
+$phone-L:                                                                       480px !default;
+$tab-S:                                                                         600px !default;
+$tab-M:                                                                         720px !default;
+$tab-L:                                                                         840px !default;
+$tab-XL:                                                                        960px !default;
+$desk-S:                                                                        1024px !default;
+$desk-M:                                                                        1280px !default;
+$desk-L:                                                                        1440px !default;
+$desk-XL:                                                                       1600px !default;
 
-$primary-color:                 #ff6c2c;
-$secondary-color:               #5fb2e4;
-$warning-color:                 #F5A623;
-$danger-color:                  #e74c3c;
-$success-color:                 #B8E986;
-$info-color:                    $white;
+$phone:                                                                         $phone-S !default;
+$phablet:                                                                       $phone-M !default;
+$tab:                                                                           $tab-S !default;
+$lap:                                                                           $desk-S !default;
+$desk:                                                                          $desk-M !default;
+$tv:                                                                            $desk-XL + 1 !default;
 
-//Typography
+//---------------- UTILS --------------- //
 
-$heading-huge:                  4.0rem;
-$heading-large:                 3.6rem;
-$heading-medium:                3.0rem;
-$heading-small:                 2.4rem;
-$heading-smaller:               1.8rem;
-$heading-tiny:                  1.5rem;
+// icons
 
-//Sizes
+$icons: (
+    "1x":                                                                       1.6rem, // 16px
+    "2x":                                                                       3.2rem, // 32px
+    "3x":                                                                       4.8rem, // 48px
+    "4x":                                                                       6.4rem, // 64px
+    "5x":                                                                       8.0rem  // 80px
+) !default;
 
-$button-height:                 48px;
-$button-padding:                0 24px;
-$button-radius:                 6px;
-$field-height:                  48px;
-$field-padding:                 0 20px;
-$field-radius:                  6px;
-$field-background:              transparent;
+// colors
 
-$topnav-height:                 128px;
-$topnav-logo-padding:           32px;
-$topnav-logo-height:            $topnav-height - ($topnav-logo-padding * 2);
-$topnav-color:                  $white;
-$topnav-text-color:             $black;
+$colors: (
+    "primary":                                                                  #3C3F47,
+    "secondary":                                                                #2980B9,
+    "success":                                                                  #B8E986,
+    "danger":                                                                   #E74C3C,
+    "info":                                                                     #3498DB,
+    "warning":                                                                  #F5A623,
+    "light":                                                                    #E6E6E6,
+    "dark":                                                                     #2C2C2C,
 
-//Misc
+    "white":                                                                    #FFFFFF,
+    "fog":                                                                      #E6E6E6,
+    "steel":                                                                    #C9C9C9,
+    "smoke":                                                                    #AEAEAE,
+    "iron":                                                                     #747474,
+    "carbon":                                                                   #545454,
+    "coal":                                                                     #2C2C2C,
+    "black":                                                                    #000000
+) !default;
 
-$code-theme:                    'dark';
-$progress-color:                $secondary-color;
+//---------------- GENERAL --------------- //
+
+// typography
+
+$heading-font-family:                                                           'Montserrat', sans-serif !default;
+$body-font-family:                                                              'Lato', Helvetica, Arial, sans-serif !default;
+$monospace-font-family:                                                         'Lucida Console', Courier, monospace !default;
+
+$heading-line-height:                                                           1.25 !default;
+$body-line-height:                                                              1.6 !default;
+
+$heading-font-weight:                                                           600 !default;
+$body-font-weight:                                                              400 !default;
+
+$heading-margin:                                                                0 0 map-get($spaces, 'l') !default;
+$paragraph-margin:                                                              0 0 map-get($spaces, 'm') !default;
+
+$heading-xxl:                                                                   4.8rem !default;
+$heading-xl:                                                                    4.0rem !default;
+$heading-l:                                                                     3.2rem !default;
+$heading-m:                                                                     2.0rem !default;
+$heading-s:                                                                     1.8rem !default;
+$heading-xs:                                                                    1.6rem !default;
+
+$body-size:                                                                     1.6rem !default;
+$small-size:                                                                    1.2rem !default;
+
+// link
+
+$link-color:                                                                    map-get($colors, 'primary') !default;
+$link-hover-color:                                                              darken($link-color, 20%) !default;
+$link-disabled-color:                                                           map-get($colors, 'smoke') !default;
+
+// list
+
+$list-margin:                                                                   0 0 map-get($spaces, 'm') !default;
+$list-child-margin:                                                             map-get($spaces, 'm') 0 map-get($spaces, 'm') map-get($spaces, 'xl') !default;
+
+// blockquote
+
+$blockquote-border-color:                                                       map-get($colors, 'fog') !default;
+$blockquote-body-color:                                                         map-get($colors, 'iron') !default;
+$blockquote-author-color:                                                       map-get($colors, 'carbon') !default;
+$blockquote-margin:                                                             0 0 map-get($spaces, 'm') !default;
+
+// divider
+
+$hr-color:                                                                      map-get($colors, 'fog') !default;
+$hr-margin:                                                                     map-get($spaces, 'm') 0 !default;
+
+// code
+
+$code-theme:                                                                    'dark' !default;
+$code-font-size:                                                                1.4rem !default;
+$code-radius:                                                                   0.4rem !default;
+$code-padding:                                                                  map-get($spaces, 'xxs') map-get($spaces, 'xs') !default;
+$code-block-padding:                                                            map-get($spaces, 's') !default;
+$code-block-margin:                                                             0 0 map-get($spaces, 'm') !default;
+
+//---------------- COMPONENTS --------------- //
+
+// Alert
+
+$alert-padding:                                                                 map-get($spaces, 'm') map-get($spaces, 'l') !default;
+$alert-radius:                                                                  4px !default;
+
+$alert-border-width:                                                            1px !default;
+$alert-border-style:                                                            solid !default;
+
+$alert-background-transparency:                                                 0 !default;
+
+// Avatar
+
+$avatar-width:                                                                  48px !default;
+
+// Breadcrumb
+
+$breadcrumb-font-family:                                                        Montserrat !default;
+$breadcrumb-font-size:                                                          auto !default;
+$breadcrumb-font-weight:                                                        500 !default;
+$breadcrumb-active-font-weight:                                                 600 !default;
+
+$breadcrumb-padding:                                                            map-get($spaces, 's') map-get($spaces, 'm') !default;
+$breadcrumb-radius:                                                             4px !default;
+$breadcrumb-item-margin:                                                        0 map-get($spaces, 's') !default;
+
+$breadcrumb-color:                                                              map-get($colors, 'smoke') !default;
+$breadcrumb-hover-color:                                                        map-get($colors, 'primary') !default;
+$breadcrumb-active-color:                                                       map-get($colors, 'primary') !default;
+$breadcrumb-background:                                                         map-get($colors, 'fog') !default;
+
+$breadcrumb-separator:                                                          '/' !default;
+$breadcrumb-limit:                                                              3 !default;
+
+// Buttons
+
+$button-sizes: (
+    'xxl':                                                                      4.8rem,
+    'xl':                                                                       4.0rem,
+    'l':                                                                        3.2rem,
+    'm':                                                                        2.0rem,
+    's':                                                                        1.8rem,
+    'xs':                                                                       1.6rem,
+    'xxs':                                                                      1.4rem
+) !default;
+
+$button-default-height:                                                         map-get($button-sizes, 'xl') !default;
+$button-default-shape:                                                          'rounded' !default;
+$button-default-text-color:                                                     map-get($colors, 'white') !default;
+
+$button-font-family:                                                            Montserrat !default;
+$button-font-size:                                                              1.4rem !default;
+$button-font-weight:                                                            500 !default;
+$button-text:                                                                   uppercase !default;
+
+$button-padding:                                                                0 map-get($spaces, 'l') !default;
+$button-radius:                                                                 .4rem !default;
+$button-icon-margin:                                                            map-get($spaces, 's') !default;
+
+$button-border-width:                                                           .2rem !default;
+$button-border-style:                                                           solid !default;
+
+$button-shadow-color:                                                           map-get($colors, 'coal') !default;
+$button-disabled-color:                                                         map-get($colors, 'fog') !default;
+$button-disabled-text-color:                                                    map-get($colors, 'smoke') !default;
+$button-hover-color-shift:                                                      15% !default;
+$button-active-color-shift:                                                     10% !default;
+
+// Card
+
+$card-title-font-family:                                                        Montserrat !default;
+$card-body-font-family:                                                         Lato !default;
+$card-title-font-size:                                                          1.8rem !default;
+$card-subtitle-font-size:                                                       1.4rem !default;
+$card-body-font-size:                                                           1.6rem !default;
+
+$card-gutter:                                                                   map-get($spaces, 'm') !default;
+$card-limited-width:                                                            320px !default;
+
+$card-radius:                                                                   4px !default;
+
+$card-default-background:                                                       map-get($colors, 'white') !default;
+
+// Dropdown
+
+$dropdown-gutter:                                                               map-get($spaces, 'xs') !default;
+
+$dropdown-width:                                                                160px !default;
+
+$dropdown-radius:                                                               4px !default;
+
+$dropdown-background:                                                           map-get($colors, 'fog') !default;
+$dropdown-color:                                                                map-get($colors, 'carbon') !default;
+$dropdown-hover-color:                                                          map-get($colors, 'coal') !default;
+
+// Forms
+
+$field-font-family:                                                             Montserrat !default;
+$field-font-size:                                                               1.4rem !default;
+$field-font-weight:                                                             600 !default;
+$field-placeholder-font-weight:                                                 500 !default;
+
+$field-base-gutter:                                                             12px !default;
+$field-min-width:                                                               256px !default;
+$field-height:                                                                  40px !default;
+
+$field-padding:                                                                 0 $field-base-gutter !default;
+$field-margin:                                                                  0 !default;
+$field-radius:                                                                  4px !default;
+
+$field-border-width:                                                            2px !default;
+$field-border-style:                                                            solid !default;
+$field-border-color:                                                            map-get($colors, 'fog') !default;
+$field-active-border-color:                                                     map-get($colors, 'primary') !default;
+$field-disabled-border-color:                                                   map-get($colors, 'smoke') !default;
+
+$field-background:                                                              transparent !default;
+$field-active-background:                                                       $field-background !default;
+$field-disabled-background:                                                     map-get($colors, 'fog') !default;
+$field-text-color:                                                              map-get($colors, 'coal') !default;
+$field-active-text-color:                                                       $field-text-color !default;
+$field-disabled-text-color:                                                     map-get($colors, 'smoke') !default;
+$field-placeholder-color:                                                       map-get($colors, 'smoke') !default;
+
+// textarea
+
+$textarea-min-height:                                                           $field-height * 2 !default;
+
+$textarea-padding:                                                              20px $field-base-gutter 0 $field-base-gutter !default;
+
+// field icon
+
+$field-icon-padding:                                                            $field-base-gutter * 2 + 8px !default; // icon width: 8px
+
+$field-icon-color:                                                              map-get($colors, 'fog') !default;
+$field-icon-color-active:                                                       map-get($colors, 'primary') !default;
+
+// field actions icon
+
+$field-actions-icon-color:                                                      map-get($colors, 'primary') !default;
+
+// field label
+
+$field-label-font-family:                                                       $field-font-family !default;
+$field-label-font-weight:                                                       $field-font-weight !default;
+
+$field-label-color:                                                             $field-text-color !default;
+
+$field-label-margin:                                                            0 0 4px 0 !default;
+$field-label-inline-margin:                                                     0 $field-base-gutter * .5 0 0 !default;
+
+// field feedback
+
+$field-feedback-font-family:                                                    $field-font-family !default;
+$field-feedback-font-size:                                                      1.2rem !default;
+
+$field-feedback-padding:                                                        4px 18px !default;
+$field-feedback-margin:                                                         4px 0 0 0 !default;
+$field-feedback-radius:                                                         $field-radius !default;
+
+$field-feedback-default-color:                                                  map-get($colors, 'black') !default;
+$field-feedback-default-background:                                             map-get($colors, 'fog') !default;
+
+// select
+
+$select-arrow-size:                                                             32px 32px !default;
+$select-arrow-position:                                                         right 4px !default;
+
+// Dialogs
+
+$dialog-width-limit:                                                            $phone !default;
+$dialog-padding:                                                                16px !default;
+$dialog-title-font-size:                                                        1.8rem !default;
+$dialog-title-font-family:                                                      Montserrat !default;
+$dialog-title-font-weight:                                                      600 !default;
+$dialog-icon-size:                                                              80px !default;
+$dialog-button-height:                                                          48px !default;
+
+// Modal
+
+$modal-wrapper-background:                                                      map-get($colors, 'white') !default;
+$modal-bar-height:                                                              64px !default;
+$modal-bar-padding:                                                             0 16px !default;
+$modal-solid-bar-background:                                                    map-get($colors, 'white') !default;
+
+// Navbar
+
+$navbar-font-family:                                                            Montserrat !default;
+$navbar-font-size:                                                              1.4rem !default;
+$navbar-font-weight:                                                            600 !default;
+$navbar-logo-font-family:                                                       Montserrat !default;
+$navbar-logo-font-size:                                                         2.4rem !default;
+$navbar-logo-font-weight:                                                       700 !default;
+
+$navbar-gutter:                                                                 map-get($spaces, 'm') !default;
+
+$navbar-limited-width:                                                          $desk !default;
+$navbar-dropdown-width:                                                         160px !default;
+$navbar-height:                                                                 64px !default;
+$navbar-logo-height:                                                            48px !default;
+
+$navbar-color:                                                                  map-get($colors, 'black') !default;
+$navbar-hover-color-shift:                                                      10% !default;
+$navbar-logo-color:                                                             map-get($colors, 'black') !default;
+$navbar-logo-hover-color-shift:                                                 10% !default;
+$navbar-background:                                                             map-get($colors, 'white') !default;
+$navbar-background-hover-color-shift:                                           10% !default;
+
+// Notification
+
+$notification-max-width:                                                        512px !default;
+$notification-min-height:                                                       64px !default;
+
+$notification-margin:                                                           map-get($spaces, 's') 0 0 0 !default;
+$notification-padding:                                                          map-get($spaces, 'm') 0 !default;
+$notification-radius:                                                           4px !default;
+
+$notification-border:                                                           1px solid map-get($colors, 'fog') !default;
+
+$notification-description-color:                                                map-get($colors, 'iron') !default;
+$notification-background:                                                       map-get($colors, 'white') !default;
+
+// Progress
+
+$loader-duration:                                                               2s !default;
+$loader-background:                                                             transparentize(map-get($colors, 'primary'), .8) !default;
+$loader-thickness:                                                              6px !default;
+$loader-thumb-width:                                                            50% !default;
+
+$spinner-ring-size:                                                             64px !default;
+$spinner-ring-thickness:                                                        4px !default;
+$spinner-overlay-background:                                                    transparentize(map-get($colors, 'white'), .4) !default;
+$spinner-spin-duration:                                                         3s !default;
+
+// Sidenav
+
+$sidenav-title-font-family:                                                     Montserrat !default;
+$sidenav-title-font-size:                                                       2.4rem !default;
+$sidenav-title-font-weight:                                                     bold !default;
+
+$sidenav-label-font-family:                                                     Montserrat !default;
+$sidenav-label-font-size:                                                       1.6rem !default;
+$sidenav-label-font-weight:                                                     500 !default;
+$sidenav-label-text-transform:                                                  uppercase !default;
+
+$sidenav-item-font-family:                                                      Montserrat !default;
+$sidenav-item-font-size:                                                        1.6rem !default;
+$sidenav-item-font-weight:                                                      600 !default;
+
+$sidenav-width:                                                                 320px !default;
+$sidenav-header-height:                                                         128px !default;
+$sidenav-header-compact-height:                                                 64px !default;
+$sidenav-header-logo-height:                                                    64px !default;
+
+$sidenav-header-logo-margin:                                                    0 map-get($spaces, 'm') 0 0 !default;
+$sidenav-header-padding:                                                        0 map-get($spaces, 'l') !default;
+$sidenav-header-compact-padding:                                                map-get($spaces, 'm') !default;
+$sidenav-label-padding:                                                         map-get($spaces, 'm') !default;
+$sidenav-item-margin:                                                           map-get($spaces, 'm') !default;
+$sidenav-item-padding:                                                          map-get($spaces, 's') map-get($spaces, 'm') !default;
+$sidenav-item-icon-margin:                                                      0 map-get($spaces, 's') 0 0 !default;
+$sidenav-item-radius:                                                           4px !default;
+
+$sidenav-border-color:                                                          map-get($colors, 'fog') !default;
+$sidenav-border-style:                                                          solid !default;
+$sidenav-border-width:                                                          0 !default;
+
+$sidenav-background:                                                            map-get($colors, 'fog') !default;
+$sidenav-header-background:                                                     map-get($colors, 'fog') !default;
+$sidenav-title-color:                                                           map-get($colors, 'coal') !default;
+$sidenav-divider-color:                                                         map-get($colors, 'steel') !default;
+$sidenav-label-color:                                                           map-get($colors, 'steel') !default;
+$sidenav-item-color:                                                            map-get($colors, 'carbon') !default;
+$sidenav-item-hover-color:                                                      map-get($colors, 'carbon') !default;
+$sidenav-item-active-color:                                                     map-get($colors, 'primary') !default;
+$sidenav-item-hover-background:                                                 map-get($colors, 'steel') !default;
+$sidenav-item-active-background:                                                transparentize(map-get($colors, 'primary'), .8) !default;
+$sidenav-overlay:                                                               transparentize(map-get($colors, 'black'), .8) !default;
+
+// Switches
+
+$switch-height:                                                                 40px !default;
+$switch-width:                                                                  70px !default;
+$switch-radius:                                                                 $switch-height / 2 !default;
+$switch-padding:                                                                8px !default;
+$switch-bullet-radius:                                                          ($switch-height - $switch-padding * 2) / 2 !default;
+$switch-still-color:                                                            map-get($colors, 'fog') !default;
+$switch-still-bullet-color:                                                     map-get($colors, 'white') !default;
+$switch-color:                                                                  map-get($colors, 'primary') !default;
+$switch-bullet-color:                                                           map-get($colors, 'white') !default;
+
+// Table
+
+$table-background-color:                                                        transparentize(map-get($colors, 'fog'), .6) !default;
+$table-radius:                                                                  .4rem !default;
+$table-border-width:                                                            .1rem !default;
+$table-border-style:                                                            solid !default;
+$table-border-color:                                                            map-get($colors, 'fog') !default;
+$table-row-vertical-padding:                                                    map-get($spaces, 's') !default;
+$table-row-horizontal-padding:                                                  map-get($spaces, 'm') !default;
+
+
+// Tabs
+
+$tabs-font-family:                                                              Montserrat !default;
+$tabs-font-size:                                                                1.6rem !default;
+$tabs-font-weight:                                                              700 !default;
+$tabs-color:                                                                    map-get($colors, 'smoke') !default;
+$tabs-font-size-active:                                                         1.6rem !default;
+$tabs-font-weight-active:                                                       700 !default;
+$tabs-color-active:                                                             map-get($colors, 'coal') !default;
+$tabs-item-margin:                                                              24px !default;
+$tabs-text-transform:                                                           capitalize !default;
+
+$tabs-underline-thickness:                                                      2px !default;
+$tabs-underline-width:                                                          100% !default;
+$tabs-underline-padding:                                                        0 !default;
+$tabs-underline-radius:                                                         0 !default;
+
+$tabs-bordered-height:                                                          40px !default;
+$tabs-bordered-border-size:                                                     2px !default;
+$tabs-bordered-border-style:                                                    solid !default;
+$tabs-bordered-color:                                                           map-get($colors, 'primary') !default;
+$tabs-bordered-radius:                                                          4px !default;
+$tabs-bordered-padding:                                                         0 24px !default;
+$tabs-bordered-font-weight:                                                     500 !default;
+
+$tabs-solid-background:                                                         map-get($colors, 'primary') !default;
+$tabs-solid-hover-background:                                                   darken(map-get($colors, 'primary'), 15%) !default;
+$tabs-solid-min-height:                                                         48px !default;
+$tabs-solid-max-height:                                                         72px !default;
+$tabs-solid-padding:                                                            0 16px !default;
+$tabs-solid-min-width:                                                          96px !default;
+$tabs-solid-color:                                                              transparentize(map-get($colors, 'white'), .4) !default;
+$tabs-solid-active-color:                                                       map-get($colors, 'white') !default;
+$tabs-solid-font-weight:                                                        500 !default;
+$tabs-solid-font-size:                                                          1.4rem !default;
+$tabs-solid-text-transform:                                                     uppercase !default;

@@ -1,15 +1,15 @@
 <footer class="footer">
-    <div class="grid">
-        <div class="grid__cell phone-up-1of1 lap-up-1of2 footer__left">
-            <img src="{{strings.logo-footer}}" alt="logo" class="footer__logo">
-            <p>{{strings.copyright}}</p>
-        </div>
-        <div class="grid__cell phone-up-1of1 lap-up-1of2 footer__right">
-            <p>{{strings.social.title}}</p>
-
-            {{#each strings.social.items}}
-            <a href="{{this.link}}" target="_blank"><i class="fa fa-{{this.name}}{{#if this.isSquare}}-square{{/if}}"></i></a>
-            {{/each}}
-        </div>
+  <div class="grid">
+    <div class="grid__cell phone-up-1of1 tab-up-1of2 footer__left">
+      <img src="{{ strings.logoFooter }}" alt="Logo" class="footer__left__logo" />
+      <p class="footer__left__copyright">{{ strings.copyright }}</p>
     </div>
+    <div class="grid__cell phone-up-1of1 tab-up-1of2 footer__right">
+      <p>{{ strings.social.title }}</p>
+
+      {{#each strings.social.items}}
+      <a href="{{ this.link }}" target="_blank"><i class="fab fa-{{ this.name }}"></i></a>
+      {{/each}}
+    </div>
+  </div>
 </footer>

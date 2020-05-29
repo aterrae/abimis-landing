@@ -1,40 +1,48 @@
 <section class="cover">
-    <div class="grid text-align--center">
-        {{#if strings.countdown.active}}
-            {{> landing_countdown content=strings.countdown}}
-        {{/if}}
+  <div class="grid">
+    {{#if strings.cover.countdown.active}}
+    {{> landing_cover_countdown content=strings.cover}}
+    {{else}}
+    {{> landing_cover_cell content=strings.cover}}
+    {{/if}}
+  </div>
 
-        {{> landing_cover_cell content=strings.tiles.[0]}}
-
-        {{#if strings.doubleCover}}
-            {{> landing_cover_cell content=strings.tiles.[1]}}
-        {{/if}}
+  <div class="contact">
+    <div class="grid">
+      <div class="grid__cell global-1of1 text-align--center">
+        <h4>{{{strings.contactTitle}}}</h4>
+      </div>
     </div>
-    <div class="contact">
-        <div class="grid grid--constrained">
-            <div class="grid__cell global-1of1 text-align--center">
-                <h4 class="padding-sides">{{{strings.contactTitle}}}</h4>
-            </div>
-
-            <form action="{{strings.form.mailchimpListUrl}}" method="POST" name="mc-embedded-subscribe-form" id="mc-form" target="_blank" novalidate>
-                <div class="grid__cell phone-up-1of1 desk-3of10">
-                    <input type="email" name="EMAIL" value="" placeholder="{{strings.form.email}}" class="phone-up-5of6 push--lap-1of4 lap-1of2 desk-5of6 push--global-1of12">
-                </div>
-                <div class="grid__cell phone-up-1of1 desk-3of10">
-                    <input type="text" name="FNAME" value="" placeholder="{{strings.form.name}}" class="phone-up-5of6 push--lap-1of4 lap-1of2 desk-5of6 push--global-1of12">
-                </div>
-                <div class="grid__cell phone-up-1of1 desk-3of10">
-                    <input type="text" name="LNAME" value="" placeholder="{{strings.form.surname}}" class="phone-up-5of6 push--lap-1of4 lap-1of2 desk-5of6 push--global-1of12">
-                </div>
-                <div style="position: absolute; left: -5000px;" aria-hidden="true">
-                    <input type="text" name="b_75afb8568f065242c10757684_160753883e" tabindex="-1" value="">
-                </div>
-                <div class="grid__cell phone-up-1of3 push--phone-1of3 push--phablet-1of3 push--tab-1of3 push--lap-1of3 desk-1of10">
-                    <input type="submit" name="subscribe" value={{strings.form.send}} class="button global-1of1">
-                </div>
-            </form>
+    <div class="grid">
+      <form action="{{ strings.form.mailchimpListUrl }}" method="POST" name="mc-embedded-subscribe-form" id="mc-form" target="_blank" novalidate>
+        <div class="grid__cell phone-up-1of1 lap-up-2of6 desk-up-2of8">
+          <input type="email" name="EMAIL" value="" placeholder="{{ strings.form.email }}" class="global-1of1" />
         </div>
-
-        {{> landing_footer}}
+        <div class="grid__cell phone-up-1of1 lap-up-2of6 desk-up-2of8">
+          <input type="text" name="FNAME" value="" placeholder="{{ strings.form.name }}" class="global-1of1" />
+        </div>
+        <div class="grid__cell phone-up-1of1 lap-up-2of6 desk-up-2of8">
+          <input type="text" name="LNAME" value="" placeholder="{{ strings.form.surname }}" class="global-1of1" />
+        </div>
+        <div style="position: absolute; left: -5000px;" aria-hidden="true">
+          <input type="text" name="b_75afb8568f065242c10757684_160753883e" tabindex="-1" value="" />
+        </div>
+        <div class="grid__cell phone-up-1of1 lap-up-1of1 desk-up-2of8">
+          <input type="submit" name="subscribe" value="{{ strings.form.send }}" class="button global-1of1" />
+        </div>
+      </form>
     </div>
+  </div>
+
+  <div class="grid">
+    {{#if strings.tiles.[0].visible}}
+    {{> landing_cover_cell content=strings.tiles.[0]}}
+    {{/if}}
+
+    {{#if strings.tiles.[1].visible}}
+    {{> landing_cover_cell content=strings.tiles.[1]}}
+    {{/if}}
+  </div>
+
+  {{> landing_footer}}
 </section>
